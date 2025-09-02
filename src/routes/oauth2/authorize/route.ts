@@ -5,6 +5,6 @@ import { FastifyInstance } from "fastify";
 
 export default async function route(server: FastifyInstance) {
   server.get("/oauth2/authorize", async () => {
-
+    
   });
 }

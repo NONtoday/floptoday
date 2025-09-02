@@ -1,0 +1,40 @@
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       String  @id @map("_id") @db.String
+  name     String? @unique
+  email    String? @unique
+  image    String?
+  password String
+  salt     String
+
+  theme String? @default("dark")
+
+  role         String?
+  loginAllowed Boolean?
+
+  scheduledDeletion DateTime? // TTL index for account deletion
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model mail {
+  id         String @id @map("_id") @db.String
+  author     String
+  recipients String[]
+  subject    String
+  content    String
+
+  createdAt DateTime @default(now())
+}
