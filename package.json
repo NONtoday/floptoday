@@ -1,7 +1,7 @@
 {
   "name": "floptoday",
   "version": "1.0.0",
-  "description": "",
+  "description": "Een namaak van de SomToday backend dat deel uitmaakt van FlopToday",
   "main": "dist/index.js",
   "scripts": {
     "dev": "tsx src/main.ts",
