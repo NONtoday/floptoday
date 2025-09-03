@@ -2,8 +2,8 @@
 [ ] Rooster
 [ ] Rooster
 [ ] Cijfers
-
+[ ] Huiswerk (voor week)
 
 ## Wat al gedaan:
 
-- Base routes aangemaakt
+- Base routes aangemaakt voor leerling

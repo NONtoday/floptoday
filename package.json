@@ -4,8 +4,8 @@
   "description": "Een namaak van de SomToday backend dat deel uitmaakt van FlopToday",
   "main": "dist/index.js",
   "scripts": {
-  "postinstall": "prisma generate",
-  "dev": "tsx watch -r tsconfig-paths/register --include \"./src/*\" src/main.ts",
+    "postinstall": "prisma generate",
+    "dev": "tsx watch -r tsconfig-paths/register src/main.ts",
     "build": "tsc -p tsconfig.json"
   },
   "keywords": [],
