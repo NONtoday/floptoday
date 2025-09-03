@@ -11,30 +11,71 @@ datasource db {
 }
 
 model User {
-  id       String  @id @map("_id") @db.String
-  name     String? @unique
-  email    String? @unique
-  image    String?
-  password String
-  salt     String
+  id                String  @id @map("_id") @db.String
+  name              String? @unique
+  email             String? @unique
+  image             String?
+  password          String
+  salt              String
 
-  theme String? @default("dark")
+  theme             String? @default("dark")
 
-  role         String?
-  loginAllowed Boolean?
+  role              String?
+  loginAllowed      Boolean?
+  shortIdTeacher    String?
 
   scheduledDeletion DateTime? // TTL index for account deletion
 
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
 }
 
 model mail {
-  id         String @id @map("_id") @db.String
+  id         String   @id @map("_id") @db.String
   author     String
   recipients String[]
   subject    String
   content    String
 
+  createdAt  DateTime @default(now())
+}
+
+// voor rooster is handig om docent afkorting te doen en naam en andere shit die in docs staat
+// https://github.com/elisaado/somtoday-api-docs/blob/master/README.md#schedule-get-restv1afspraken
+
+model grade {
+  id        String @id @map("_id") @db.String
+  student   String @db.String
+  vak       String @db.String
+  val       Float
+
   createdAt DateTime @default(now())
+  // Immutabel, dus geen updatedAt
+}
+
+// rooster moet ook nog
+
+model klas {
+  id        String   @id @map("_id") @db.String
+  name      String
+  members   String[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model calendarItem {
+  id           String @id @map("_id") @db.String
+  participants String[]
+  subject      String
+  startTime    DateTime
+  endTime      DateTime
+  teacher      String
+  location     String
+  homework     Json?
+  tests        Json?
+  info         Json?
+
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
 }
