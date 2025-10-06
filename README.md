@@ -1,5 +1,5 @@
 ![FlopToday Logo](./logo.webp)
-# FlopToday backend
-## Een namaak van de SomToday backend dat deel uitmaakt van FlopToday
+# FlopToday
+## Een namaak van de SomToday
 
-bedoeld om gekoppeld te worden met de SomToday leerling/docent broncode lek
+FlopToday is een namaak van SomToday door gebruik van gelekte frontend sources, met een eigen backend.
