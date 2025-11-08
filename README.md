@@ -10,7 +10,7 @@ Een Open-Source SomToday alternatief, die je zelf kunt modificeren, hosten en zo
 
 #### Wanneer is FlopToday af?
 
-Dat is onbekend en kan lang duren, we hebben levens en we werken er aan wanneer we kunnen.
+Dat is onbekend en kan lang duren, we hebben levens en we werken er aan wanneer we kunnen. (dit is eigenlijk een beetje dood )
 
 #### Gaat FlopToday Floppen?
 
